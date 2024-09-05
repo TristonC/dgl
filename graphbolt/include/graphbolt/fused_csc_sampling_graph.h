@@ -446,8 +446,8 @@ class FusedCSCSamplingGraph : public torch::CustomClassHolder {
    * class. By storing its shared memory objects, the graph controls the
    * resources of shared memory, which will be released automatically when the
    * graph is destroyed. This function is for internal use by CopyToSharedMemory
-   * and LoadFromSharedMemory. Please contact the DGL team if you need to use
-   * it.
+   * and LoadFromSharedMemory.
+   *
    * @param tensor_metadata_shm The shared memory objects of tensor metadata.
    * @param tensor_data_shm The shared memory objects of tensor data.
    */

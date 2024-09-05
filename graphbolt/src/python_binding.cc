@@ -198,7 +198,7 @@ TORCH_LIBRARY(graphbolt, m) {
   m.def("set_max_uva_threads", &cuda::set_max_uva_threads);
 #endif
 #ifdef HAS_IMPL_ABSTRACT_PYSTUB
-  m.impl_abstract_pystub("dgl.graphbolt.base", "//dgl.graphbolt.base");
+  m.impl_abstract_pystub("graphbolt.base", "//graphbolt.base");
 #endif
   m.def(
       "expand_indptr(Tensor indptr, ScalarType dtype, Tensor? node_ids, "

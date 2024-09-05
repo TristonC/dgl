@@ -12,10 +12,9 @@ else
   CPSOURCE=*.so
 fi
 
-# We build for the same architectures as DGL, thus we hardcode
-# TORCH_CUDA_ARCH_LIST and we need to at least compile for Volta. Until
-# https://github.com/NVIDIA/cccl/issues/1083 is resolved, we need to compile the
-# cuda/extension folder with Volta+ CUDA architectures.
+# We hardcode TORCH_CUDA_ARCH_LIST and we need to at least compile for Volta.
+# Until https://github.com/NVIDIA/cccl/issues/1083 is resolved, we need to
+# compile the cuda/extension folder with Volta+ CUDA architectures.
 TORCH_CUDA_ARCH_LIST="Volta"
 if ! [[ -z "${CUDAARCHS}" ]]; then
   # The architecture list is passed as an environment variable, we set
